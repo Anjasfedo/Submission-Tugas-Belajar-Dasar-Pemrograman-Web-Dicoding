@@ -1,0 +1,631 @@
+:root{
+    --text1: #3b4754;
+    --text2: #8a8dac;
+    --border-background2: #c9d3dd;
+    --background1: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: var(--background1)
+}
+
+body h1, h2, p, label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text1{
+    color: var(--text1);
+}
+
+.text2{
+    color: var(--text2);
+}
+
+label{
+    color: var(--text1);
+}
+
+.judul-pilihan h2{
+    color: var(--text1);
+}
+
+.judul-pilihan p{
+    color: var(--text2);
+}
+
+footer p{
+    color: var(--text2);
+}
+
+.logo-bawah{
+    display: grid;
+    place-content: center;
+    margin: 10px 0;
+}
+
+/* header*/
+
+header{
+    position: fixed;
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 100;
+    border-bottom: 3px solid grey;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-img{
+    display: grid;
+    place-content: center;
+    margin: 10px;
+    margin-left: 50px;
+}
+
+.navigation{
+    display: grid;
+    place-content: center;
+    margin: 10px;
+    margin-right: 50px;
+}
+
+.navi{
+    height: 25px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+.text-atas{
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+
+}
+
+/* slide */
+
+.slide{
+    margin-bottom: 90px;
+    margin-top: 75px;
+}
+
+.hero-wrapper {
+    position: relative;
+}
+
+.hero {
+    height: 567px;
+    width: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.hero-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.hero-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.header-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3.5rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+}
+
+/* home */
+
+.Home{
+    
+    margin: 20px 8vw;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+/* konten */
+
+.konten{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* konten kiri */
+
+.konten-kiri{
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gambar-atas{
+    width: 95%;
+}
+
+.konten-atas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pengguna{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.pengguna p{
+    text-align: center;
+    margin: 0;
+}
+
+.pengguna-img img{
+    border-radius: 10px;
+}
+
+.img-pengguna{
+    display: grid;
+    place-items: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.info-user{
+    display: flex;
+    align-items: center;
+}
+
+.info-pengguna p{
+    margin: 0;
+    display: flex;
+    width: 282px;
+}
+
+/* konten bawah */
+
+.konten-bawah{
+    margin-top: 15px;
+}
+
+.konten-bawah p, ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.text-bawah-gambar{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-bawah-gambar p{
+    opacity: 100%;
+}
+
+.text-konten-bawah{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 10px;
+    gap: 10px;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.list img{
+    width: 40px;
+    height: 40px;
+}
+
+/* konten kanan */
+
+.konten-kanan{
+    width: 30vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: var(--border-background2);
+    height: 35em;
+    margin: 0 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.konten-kanan p, h2, form {
+    margin: 0 40px;
+}
+
+.konten-kanan h2, p{
+    text-align: left;
+}
+
+.konten-kanan p{
+    text-align: left;
+}
+
+form input, select{
+    border: 0;
+    padding: 0;
+    border-radius: 5px;
+    height: 40px;
+}
+
+/* form */
+
+form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.form-submits{
+    display: flex;
+    justify-content: center;
+}
+
+/* package */
+
+.ourpackage{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid var(--border-background2);
+    border-bottom: 2px solid var(--border-background2);
+    margin: 30px 0;
+    padding: 50px;
+}
+
+.paket{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 20px 7vw;
+}
+
+.pilihan-atas, .pilihan-bawah{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.pilihan{
+    width: 25vw;
+    height: 125px;
+    display: flex;
+}
+
+.judul-pilihan{
+    display: flex;
+    flex-direction: column;
+}
+
+.judul-pilihan p{
+    text-align: left;
+}
+
+.judul-pilihan h2{
+    display: flex;
+    margin: 0;
+    text-align: left;
+    height: 45px;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+}
+
+/* call us */
+
+.call-us{
+    border-top: 2px solid var(--border-background2);
+    border-bottom: 2px solid var(--border-background2);
+    display: flex;
+    justify-content: center;
+}
+
+.call-us h1, p{
+    text-align: center;
+}
+
+.isi-call{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    width: 50%;
+}
+
+input[type="submit"]{
+    display: flex;
+    width: 120px;
+    height: 40px;
+    justify-content: center;
+    background-color: gray;
+    color: var(--background1);
+    border: 0;
+}
+
+.bottomn{
+    display: grid;
+    place-items: center;
+}
+
+.bottom-botton{
+    display: flex;
+    align-items: center;
+}
+
+/* footer */
+
+footer{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.text-footer-atas{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    height: 30px;
+}
+
+.text-footer-bawah{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.bottom-bawah{
+    color: var(--background1);
+    width:100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* garis */
+
+.garis1{
+    display: flex;
+    justify-content: center;
+}
+
+.garis1::before {
+    content: '';
+    height: 2px;
+    width: 20%;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    background-color: var(--border-background2);
+}
+
+.garis2::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20%;
+    left: 50%;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    background-color: var(--border-background2);
+}
+
+aside .text2 img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+/* media */
+
+@media only screen and (max-width: 720px) {
+    .konten{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paket{
+        padding: 50px 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .konten-kanan{
+        height: 40em;
+        width: 35vw;
+    }
+
+    .paket{
+       flex-direction: row; 
+       height: 600px;
+       justify-content: space-around;
+       padding: 50px 50px;
+    }
+
+    .pilihan-atas{
+        flex-direction: column;
+    }
+
+    .garis2::before{
+        opacity: 0%;
+    }
+
+    .pilihan-bawah{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .konten-kanan{
+        width: 40vw;
+    }
+
+    .paket{
+        flex-direction: column;
+        height: 750px;
+        padding: 50px 0;
+    }
+
+    .pilihan{
+        width: 100%;
+    }
+
+    .judul-pilihan{
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .logo-img{
+        margin: 10px;
+    }
+
+    .navigation{
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .konten-kanan{
+
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+.text-bawah-gambar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 75vw;
+}
+
+    .img-pengguna{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .konten-kanan{
+
+        width: 55vw;
+    }
+
+    .paket{
+        height: 1000px;
+    }
+
+    .pilihan-atas{
+        height: 50%;
+    }
+
+    .pilihan-bawah{
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    .konten-kanan{
+
+        width: 70vw;
+    }
+
+    .paket{
+        height: 1400px;
+    }
+
+    footer{
+        height: 150px;
+    }
+
+    .text-footer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .konten-kanan{
+
+        width: 75vw;
+    }
+}
