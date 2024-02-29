@@ -1,0 +1,93 @@
+:root {
+  --gradient-from: #67e8f9;
+  --gradient-to: #defbff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  /* Border for developing */
+  border: 1px solid black;
+  color: rgb(20, 10, 10);
+  font-weight: bold;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-from),
+    var(--gradient-to)
+  );
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Sections */
+
+header {
+  position: sticky;
+  top: 0;
+  min-height: 10vh;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Content Sections */
+
+main {
+  min-height: 80vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#content {
+  min-width: 80vw;
+  max-width: 80vw;
+
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+article {
+  margin: 0 5rem;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+aside {
+  /* It was 20, but since i use border on develop */
+  min-width: 18vw;
+  max-width: 18vw;
+
+  margin: 1rem 0;
+}
+
+img {
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 50%;
+}
+
+/* Footer Sections */
+
+footer {
+  min-height: 10vh;
+}
