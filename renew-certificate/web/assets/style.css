@@ -1,29 +1,12 @@
-:root {
-  --gradient-from: #daf7f4;
-  --gradient-to: #fdfdfd;
-}
-
 * {
   padding: 0;
   margin: 0;
-
   /* Border for developing */
-  /* border: 1px solid black; */
-
-  color: rgb(20, 10, 10);
-  font-weight: bold;
-
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: 1px solid black;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(
-    to bottom right,
-    var(--gradient-from),
-    var(--gradient-to)
-  );
-
   display: flex;
   flex-direction: column;
 }
@@ -37,15 +20,13 @@ a {
 header {
   position: sticky;
   top: 0;
-
   min-height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-
-  background-color: white;
   z-index: 100;
+  background-color: #fff;
 }
 
 #logo-img {
@@ -86,14 +67,7 @@ main {
 
 article {
   margin: 1rem 4rem;
-
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-
-  display: flex;
-
-  padding-bottom: 1rem;
-  border-bottom: 1px solid black;
+  min-height: 84vh;
 }
 
 .title {
@@ -102,9 +76,12 @@ article {
 
 .article-img {
   width: 10rem;
-  height: 10rem;
-
+  max-width: 100%;
+  height: auto; /* Tinggi akan disesuaikan sesuai rasio aspek gambar */
+  max-height: 100%;
   border-radius: 50%;
+
+  object-fit: cover;
 }
 
 .article-title {
@@ -120,35 +97,15 @@ article {
 }
 
 aside {
-  min-width: 18vw;
-  max-width: 18vw;
-
+  min-width: 10vw;
+  max-width: 12vw;
   margin: 1rem 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-input {
-  padding: 4px 5px;
-
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  box-shadow: none;
-  outline: none;
-}
-
-input[type="submit"] {
-  color: black;
-  background-color: rgb(34 211 238);
+  position: absolute;
+  right: 1%;
 }
 
 /* Footer Sections */
@@ -156,50 +113,9 @@ input[type="submit"] {
 footer {
   min-height: 10vh;
 
-  background-color: #333;
   width: 100%;
 
   display: grid;
   place-items: center;
 }
 
-footer > p {
-  color: #fff;
-}
-
-/* Media Query */
-
-@media screen and (max-width: 600px) {
-  header {
-    padding: 10px;
-  }
-
-  nav {
-    gap: 5px;
-  }
-
-  nav a {
-    text-align: center;
-  }
-
-  #content {
-    min-width: auto;
-    max-width: auto;
-  }
-
-  article {
-    margin: 1rem 0;
-    padding: 0 10px;
-  }
-
-  .article-img {
-    width: 100%;
-    height: auto;
-  }
-
-  aside {
-    min-width: auto;
-    max-width: auto;
-    padding: 0 10px;
-  }
-}
